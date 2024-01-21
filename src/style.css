@@ -1,0 +1,240 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.header_icon {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  color: #005bfe;
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.header_icon_text {
+  margin-left: 16px;
+}
+.header_button-addContacts {
+  width: 178px;
+  height: 38px;
+  border-radius: 6px;
+  border: none;
+  background: #f81155;
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+}
+.header_button-addContacts:hover {
+  background: #d1003e;
+}
+.header_button-addGroups {
+  width: 82px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: none;
+  background: #005bfe;
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  margin-left: 16px;
+}
+.header_button-addGroups:hover {
+  background: #0047c6;
+}
+main {
+  display: flex;
+  min-height: 600px;
+  align-items: center;
+  gap: 401px;
+  justify-content: center;
+}
+#saveContactBtn,
+#saveGroupsBtn {
+  background: #005bfe;
+  border: none;
+}
+#saveContactBtn:hover,
+#saveGroupsBtn:hover {
+  background: #0047c6;
+}
+
+#addGroupInputBtn {
+  background: none;
+  border: none;
+  color: #005bfe;
+}
+#addGroupInputBtn:hover {
+  background-color: rgba(0, 91, 254, 0.2);
+  color: #005bfe;
+}
+.btn-close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.editable-input-container {
+  position: relative;
+  display: flex;
+
+  justify-content: space-between;
+  margin: 12px auto;
+  width: 90%;
+}
+#modals {
+  width: 40%;
+}
+.editable-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+}
+.editable-input-icon {
+  width: 10%;
+  border-radius: 6px;
+  border: 1px solid #00000031;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.delete-icon {
+  margin-left: 8px;
+  fill: #ccc;
+  width: 20%;
+  border-radius: 6px;
+  border: 1px solid #000;
+}
+#svgDelete:hover path {
+  fill: white;
+  opacity: 1;
+}
+.editable-input-icon:hover {
+  background: #ea3d2f;
+}
+
+.accordion {
+  width: 80%;
+  border-radius: 6px;
+  background: #fff;
+  color: #005bfe;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.accordion-button {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Arial;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.contact-name {
+  width: 40%;
+  opacity: 0.5;
+}
+.contact-phoneNumber {
+  width: 40%;
+}
+.contact-details {
+  display: flex;
+  width: 20%;
+}
+.contact-details {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.editSvg {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.editSvg:hover {
+  background: #005bfe;
+}
+#editSvg:hover path {
+  fill: white;
+  opacity: 1;
+}
+.deleteSvg {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.deleteSvg:hover {
+  background: #ea3d2f;
+}
+
+@media (max-width: 800px) {
+  .contact {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_icon,
+  .header_button-addContacts,
+  .header_button-addGroups {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+  .header_icon {
+    justify-content: center;
+  }
+  main {
+    min-height: 0;
+  }
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-name,
+  .contact-phoneNumber,
+  .contact-details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+  }
+  .contact-details {
+    justify-content: space-around;
+  }
+  #modals {
+    width: 100%;
+  }
+}
+
