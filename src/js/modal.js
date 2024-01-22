@@ -149,10 +149,14 @@ export function initApp() {
   // Функция рендеринга аккордиона
   function renderAccordion() {
     const accordion = document.getElementById("accordion");
+
     accordion.innerHTML = "";
 
     const groups = getGroups();
-
+    if(groups.length === 0){
+      accordion.innerText = "Список контактов пуст";
+      return
+    }
     groups.forEach((groupName, index) => {
       const card = document.createElement("div");
       card.classList.add("accordion-item");
